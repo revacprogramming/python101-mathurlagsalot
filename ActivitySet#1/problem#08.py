@@ -1,14 +1,23 @@
-# Files
+#files
 
-f = input("Enter the file name: ")
-fileop = open(f)
-c = 0
-s = 0
-for i in f:
-    if i.startswith("X-DSPAM-Confidence"):
-        c = c + 1
-        n = float(i[20::1])
-        s = s + n
-    avg = s/(c)
-    print("Average spam confidence: ", avg)
-  
+def filehandle():
+    fname = input("Enter file name: ")
+    fhand = open(fname)
+    count,average = 0,0
+    for line in fhand:
+        line=line.rstrip()
+        if not line.startswith("X-DSPAM-Confidence:") : 
+            continue
+        average += float(line[20:])
+        count = count + 1
+    final=average/count
+    return final
+
+def output(final):
+    print("Average spam confidence:", final)
+
+def main():
+    final=filehandle()
+    output(final)
+
+main()
