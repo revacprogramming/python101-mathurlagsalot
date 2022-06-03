@@ -1,18 +1,19 @@
-
+def input_n():
+    a = input("Enter the first number: ")
+    b = input("Enter the second number: ")
+    return a,b
+  
 def add(a, b):
-    pass  # ...
-
-
+    sum = float(a)+float(b) 
+    return sum
+  
 def output(a, b, sum):
-    pass  # ...
-
-
+    print("The sum of ",a ,"and", b ,"is",sum)  
+  
 def main():
-    a, b = input_two_numbers()
-    sum = add(a, b)
-
-    output(a, b, sum)
-
+    a, b = input_n()
+    res = add(a, b)
+    output(a, b, res)
 
 if __name__ == '__main__':
     main()
