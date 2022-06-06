@@ -1,8 +1,8 @@
 # Why Program
-def hello:
+def hello():
   print("hello world")
 
-def main:
+def main():
   hello()
 
 main()
