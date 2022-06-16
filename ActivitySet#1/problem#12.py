@@ -3,10 +3,10 @@
 
 import re
 def file():
-  file=open("dataset/regex.txt")
+  f=open("dataset/regex.txt")
   s=[]
   sum=0
-  for check in file:
+  for check in f:
     check=check.rstrip()
     main=re.findall('[0-9]+',check)
     if s!=main:
