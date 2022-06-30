@@ -1,17 +1,16 @@
-# Dictionaries
+def words():
+  fop = open("mbox-short.txt")
+  c = 0
+  for l in fop:
+      l = l.rstrip()
+      if l == "": continue
+          
+      words = l.split()
+      if words[0] !="From": continue
+          
+      print(words[1])
+      c += 1
+  
+  print ("There were", c, "lines in the file with From as the first word")
 
-filename = "dataset/mbox-short.txt"
-filehandle =open(filename)
-count={}
-
-for line in filehandle :
-	if line.startswith("From "):
-		email=line.split()[1]
-		count[email]=count.get(email,0)+1
-max_count=0
-max_emails=0
-for email in count:
-	if count[email]>max_count:
-		max_count=count[email]
-		max_emails=email
-print(max_emails,max_count)
+words()
