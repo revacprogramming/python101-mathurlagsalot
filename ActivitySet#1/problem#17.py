@@ -5,11 +5,11 @@ def input():
 	return score
   
 def scores(s):
-  if s > 1:
-    print("Out of Range")
-  if s < 0:
-    print("Score cant be Negative")
-    if s >= 0.9:
+ 	if s > 1:
+    		print("Out of Range")
+  	if s < 0:
+    		print("Score cant be Negative")
+    	if s >= 0.9:
 		return 'A'
 	elif s >=0.8:
 		return 'B'
