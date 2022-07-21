@@ -1,17 +1,26 @@
-score = float(input("Enter Score: "))
+# Conditional Execution(II)
 
+def input():
+	score = float(input("Enter Score: "))
+	return score
+  
+def scores(s):
+  if s > 1:
+    print("Out of Range")
+  if s < 0:
+    print("Score cant be Negative")
+    if s >= 0.9:
+		return 'A'
+	elif s >=0.8:
+		return 'B'
+	elif s >=0.7:
+		return 'C'
+	elif s >= 0.6:
+		return 'D'
+	elif s < 0.6:
+		return 'F'
 
-if(score >= 0.9):
-	print("A")
-
-elif(score >= 0.8):
-	print("B")
-
-elif(score >= 0.7):
-	print("C")
-
-elif(score >= 0.6):
-	print("D")
-   
-elif(score < 0.6):
-	print("F")
+    
+def main():
+	scores()
+  
